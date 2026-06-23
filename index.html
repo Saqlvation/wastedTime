@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wasted time</title>
+        <link rel="icon" type="image/png" href="assets/icon.png">
+
+
+    <style>
+        body {
+            text-align: center;
+        }
+        #alert {
+            font-size: 5px;
+        }
+    </style>
+
+
+    </head>
+
+    <body>
+        <header>
+            <h1> Wasted Time </h1>
+            <p> Find out how much time you have wasted... </p>
+        </header>
+
+        <div id="userData">
+        <label> State Your age </label>
+        <br>
+        <input type="number" id="userAge" placeholder="example: 16">
+        <br>
+        <br>
+        <br>
+        <label> How much hours do you spend on useless tasks everyday? (example tiktok)</label>
+        <br>
+        <input type="number" id="userHours" placeholder="example: 4">
+        <p id="alert">Please remember nothing will be saved, its all local.</p>
+        </div>
+
+        <div id="calculation">
+            <button id="calculateTheTime">Show me the damage</button>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h2 id="resultText"> placeholder </h2>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
