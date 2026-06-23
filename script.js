@@ -40,12 +40,14 @@ calculateBtn.addEventListener("click", function() {
     resultScreen.style.display = "block";
     resultText.textContent = "You will spend " + lifeDays + " days on this before you potentially die.";
     let factString = "";
-    for(let i = 0; i < comparisons.length; i++){
+    comparisons.sort(() => Math.random() - 0.5); // this shuffles the array to show different possibilities each time
+    for(let i = 0; i < 3; i++){
         let times = Math.round(lifeHours / comparisons[i].hours);
             if(times >= 1){
-                factString = factString + "you could have: " + comparisons[i].label + " " + times + " times\n";
+                factString = factString + "<p>you could have: " + comparisons[i].label + " " + times + " times</p>";
+                
     }
 }
-factText.textContent = factString;
+factText.innerHTML = factString;
 
 });
