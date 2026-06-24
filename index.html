@@ -46,7 +46,7 @@
         #results {
             border: 1px solid #a0a77a;
             font-size: 1.5rem;
-            max-width: 500px;
+            max-width: 700px;
             margin: 20px auto;
             padding: 15px;
         }
@@ -68,12 +68,17 @@
             cursor: pointer;
             
         }
+
+        #wastedTimeArea{
+            text-align: left;
+        }
     </style>
 
 
     </head>
 
     <body>
+        
         <header>
             <h1 class="font-effect-3d-float" style="color: red;"> Wasted Time </h1> <!-- Using the 3d-float effect from google-->
             <p> Find out how much time you have wasted... </p>
@@ -86,7 +91,8 @@
         <br>
         <br>
         <br>
-        <label> How much hours do you spend on useless tasks everyday? (example tiktok)</label>
+        <label> How much hours do you spend on useless tasks everyday? </label>
+        <label style="color: #35b831;">(for example tiktok)</label>
         <br>
         <input type="number" id="userHours" placeholder="example: 4">
         <p id="alert">Please remember nothing will be saved, its all local.</p>
@@ -99,6 +105,12 @@
         <div id="results" style="display: none;">
             <h2 id="resultText"> placeholder </h2>
             <h3 id="factText"> placeholder </h3>
+        </div>
+
+        <div id="wastedTimeArea" style="display: none;">
+        <p id="wastedHours">placeholder</p>
+        <p id="wastedDays">placeholder</p>
+        <p id="wastedYears">placeholder</p>
         </div>
 
         <script src="script.js"></script>

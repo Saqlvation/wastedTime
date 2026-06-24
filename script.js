@@ -4,6 +4,12 @@ const resultText = document.getElementById("resultText");
 const resultScreen = document.getElementById("results");
 const hoursInput = document.getElementById("userHours");
 const factText = document.getElementById("factText");
+
+const wastedHours = document.getElementById("wastedHours");
+const wastedDays = document.getElementById("wastedDays");
+const wastedYears = document.getElementById("wastedYears");
+
+
 // i create a arrray of objects so i can calculate how many times the user could habe done these things
 const comparisons = [
     { label: "learn guitar", hours: 250 },
@@ -38,6 +44,7 @@ calculateBtn.addEventListener("click", function() {
     let lifeYears = lifeDays / 365;
     lifeDays = Math.round(lifeDays);
     resultScreen.style.display = "block";
+    wastedTimeArea.style.display = "block";
     resultText.innerHTML  = "You will spend <span class='highlight'>" + lifeDays + " </span> days on that useless task before you potentially die.";
     let factString = "";
     comparisons.sort(() => Math.random() - 0.5); // this shuffles the array to show different possibilities each time
@@ -45,8 +52,11 @@ calculateBtn.addEventListener("click", function() {
         let times = Math.round(lifeHours / comparisons[i].hours);
             if(times >= 1){
                 factString = factString + "<p>that's enough time to : <span class='comparasionText'>" + comparisons[i].label + " </span> <span class='comparasionHours'>" + times + " </span> times</p>";
-                
     }
+    wastedHours.innerHTML = "You wasted: " + lifeHours + " hours"
+    wastedDays.innerHTML = "You wasted: " + Math.round(lifeDays) + " days"
+    wastedYears.innerHTML = "You wasted: " + Math.round(lifeYears) + " years"
+
 }
 factText.innerHTML = factString;
 
