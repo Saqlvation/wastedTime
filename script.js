@@ -38,13 +38,13 @@ calculateBtn.addEventListener("click", function() {
     let lifeYears = lifeDays / 365;
     lifeDays = Math.round(lifeDays);
     resultScreen.style.display = "block";
-    resultText.innerHTML  = "You will spend <span class='highlight'>" + lifeDays + " </span> days on this before you potentially die.";
+    resultText.innerHTML  = "You will spend <span class='highlight'>" + lifeDays + " </span> days on that useless task before you potentially die.";
     let factString = "";
     comparisons.sort(() => Math.random() - 0.5); // this shuffles the array to show different possibilities each time
     for(let i = 0; i < 3; i++){
         let times = Math.round(lifeHours / comparisons[i].hours);
             if(times >= 1){
-                factString = factString + "<p>you could have: <span class='comparasionText'>" + comparisons[i].label + " </span> <span class='comparasionHours'>" + times + " </span> times</p>";
+                factString = factString + "<p>that's enough time to : <span class='comparasionText'>" + comparisons[i].label + " </span> <span class='comparasionHours'>" + times + " </span> times</p>";
                 
     }
 }
