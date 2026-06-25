@@ -53,11 +53,12 @@ calculateBtn.addEventListener("click", function() {
             if(times >= 1){
                 factString = factString + "<p>that's enough time to : <span class='comparasionText'>" + comparisons[i].label + " </span> <span class='comparasionHours'>" + times + " </span> times</p>";
     }
+}
     wastedHours.innerHTML = "You wasted: " + lifeHours + " hours"
     wastedDays.innerHTML = "You wasted: " + Math.round(lifeDays) + " days"
     wastedYears.innerHTML = "You wasted: " + Math.round(lifeYears) + " years"
 
-}
+
 factText.innerHTML = factString;
 
 });
