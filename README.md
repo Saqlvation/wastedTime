@@ -4,7 +4,8 @@ a simple web app where you enter how much time you spend on your apps daily. and
 ![example1](assets/example1.png)
 
 ### how to try it?
-clone the repository or download it from github
+to run this locally simply download the file from github or clone it using git clone (link) then once everything is installed on your computer simply open the "index.html" file, you do not need to install anything as this can simply run on ur browser.
+
 otherwise you can try it here
 [TRY HERE](https://wasted-time.vercel.app/)
 
