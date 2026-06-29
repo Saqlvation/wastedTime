@@ -39,6 +39,20 @@ calculateBtn.addEventListener("click", function() {
     let lifeHours = 0;
     hours = Number(document.getElementById("userHours").value); // it converts strings to numbers just in case the user writes other stuff
     age = Number(document.getElementById("userAge").value);
+    if (ageInput.value.trim() === "" || hoursInput.value.trim() === "") {
+        alert("Pleaseeeee fill out both fields!");
+        return;
+    }
+
+    if (age <= 0 || age >= 80) {
+        alert("for this web app the maximum age is 80.(average life span)");
+        return;
+    }
+
+    if (hours <= 0 || hours > 24) {
+        alert("theres only 24 hours in a day");
+        return;
+    }
     lifeHours = hours * 365 * (80 - age);
     let lifeDays = lifeHours / 24;
     let lifeYears = lifeDays / 365;
